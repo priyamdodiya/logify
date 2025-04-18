@@ -1,0 +1,50 @@
+.social-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #121212;
+    color: #f1f1f1;
+    padding: 20px;
+}
+
+
+.social-content {
+    overflow-y: scroll;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-top: 20px;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+
+.social-content::-webkit-scrollbar {
+    display: none;
+}
+
+.social-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #e0e0e0;
+    border: 1px solid #2a2a2a;
+}
+
+.social-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    background-color: #2a2a2a;
+}
+
+.social-card a {
+    color: #61dafb;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.social-card a:hover {
+    color: #ffffff;
+}
