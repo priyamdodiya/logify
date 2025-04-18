@@ -38,3 +38,23 @@ html, body {
     font-weight: 500;
   }
   
+
+  .switch {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .switch a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  .switch a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  

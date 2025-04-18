@@ -63,6 +63,15 @@ const Signup = () => {
             <Button type="primary" htmlType="submit" block>
               Create Account
             </Button>
+            <div className="switch">
+              Already have an account?{" "}
+              <span
+                style={{ color: "#1890ff", cursor: "pointer" }}
+                onClick={() => navigate("/signin")}
+              >
+                Go to Sign In
+              </span>
+            </div>
           </Form.Item>
         </Form>
       </Card>
