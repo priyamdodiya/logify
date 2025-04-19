@@ -34,6 +34,12 @@ const Navbar = () => {
     setPopoverVisible(false);
   };
 
+  const handleMenuClick = (path) => {
+    navigate(path);
+    setDrawerVisible(false); 
+  };
+  
+
   const popoverContent = (
     <div className="navbar-popover-content">
       <Button type="text" block onClick={() => navigate("/profile")}>
@@ -46,17 +52,17 @@ const Navbar = () => {
   );
 
   const menuItems = [
-    { key: "home", label: <Link to="/">Home</Link> },
-    { key: "todo", label: <Link to="/todo">Todo</Link> },
-    { key: "social", label: <Link to="/social">social</Link>},
-    // Conditionally render Sign In and Sign Up if NOT logged in
+    { key: "home", label: <div onClick={() => handleMenuClick("/")}>Home</div> },
+    { key: "todo", label: <div onClick={() => handleMenuClick("/todo")}>Todo</div> },
+    { key: "social", label: <div onClick={() => handleMenuClick("/social")}>Social</div> },
     ...(!loggedInUser
       ? [
-          { key: "signin", label: <Link to="/signin">Sign In</Link> },
-          { key: "signup", label: <Link to="/signup">Sign Up</Link> },
+          { key: "signin", label: <div onClick={() => handleMenuClick("/signin")}>Sign In</div> },
+          { key: "signup", label: <div onClick={() => handleMenuClick("/signup")}>Sign Up</div> },
         ]
       : []),
   ];
+  
 
   return (
     <div className="navbar">
